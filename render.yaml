@@ -1,0 +1,18 @@
+services:
+  - type: web
+    name: mcp-fileserver
+    env: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn main:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: JIRA_BASE_URL
+        value: https://yourcompany.atlassian.net
+      - key: JIRA_EMAIL
+        value: your-email@example.com
+      - key: JIRA_API_TOKEN
+        value: your-api-token
+      - key: JIRA_ISSUE_KEY
+        value: YOUR-ISSUE-KEY
+      - key: ATTACHMENT_DOWNLOAD_PATH
+        value: ./tmp
