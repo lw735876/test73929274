@@ -1,0 +1,7 @@
+python-dotenv
+langchain-openai
+mcp-use
+requests
+fastmcp
+fastapi
+uvicorn
